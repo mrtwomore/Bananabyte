@@ -2,10 +2,13 @@ import Head from 'next/head';
 import styles from '../styles/Work.module.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import ProjectModal from '../components/ProjectModal';
+import Navigation from '../components/Navigation';
 
 export default function Work() {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -73,6 +76,14 @@ export default function Work() {
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
 
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -82,17 +93,7 @@ export default function Work() {
       </Head>
 
       <main className={`${styles.main} ${isVisible ? styles.visible : ''}`}>
-        <nav className={styles.nav}>
-          <Link href="/">
-            <span className={styles.logo}>Banana Byte</span>
-          </Link>
-          <div className={styles.navLinks}>
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/work">Work</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-        </nav>
+        <Navigation />
 
         <section className={styles.hero}>
           <h1>My Work</h1>
@@ -113,7 +114,11 @@ export default function Work() {
 
         <section className={styles.projectsGrid}>
           {filteredProjects.map((project, index) => (
-            <div key={index} className={styles.projectCard}>
+            <div 
+              key={index} 
+              className={styles.projectCard}
+              onClick={() => handleProjectClick(project)}
+            >
               <div className={styles.projectImage}>
                 <img src={project.image} alt={project.title} />
                 <div className={styles.projectOverlay}>
@@ -126,19 +131,12 @@ export default function Work() {
                       ))}
                     </div>
                     <div className={styles.projectLinks}>
-                      {project.demoLink && (
-                        <a 
-                          href={project.demoLink} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className={styles.projectLink}
-                        >
-                          <span>Live Demo</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={styles.icon}>
-                            <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" />
-                          </svg>
-                        </a>
-                      )}
+                      <button className={styles.viewDetailsButton}>
+                        View Details
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={styles.icon}>
+                          <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -159,6 +157,13 @@ export default function Work() {
       <footer className={styles.footer}>
         <p>© 2024 Banana Byte. All rights reserved.</p>
       </footer>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={handleCloseModal}
+        />
+      )}
     </div>
   );
 } 

@@ -4,46 +4,30 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import Navigation from '../components/Navigation';
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    setIsVisible(true);
   }, []);
 
   if (!mounted) return null;
 
   return (
-    <>
+    <div className={styles.container}>
       <Head>
         <title>Banana Byte | Professional Digital Content Creation in Christchurch, NZ</title>
         <meta name="description" content="Transform your brand with professional digital content creation in Christchurch. Photography, videography, AI solutions, and website content that tells your unique story." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
-        <div className={styles.headerInner}>
-          <Link href="/" className={styles.logo}>
-            <span>Banana Byte</span>
-          </Link>
-          <nav className={styles.nav}>
-            <Link href="/about" className={styles.navLink}>About</Link>
-            <Link href="/services" className={styles.navLink}>Services</Link>
-            <Link href="/work" className={styles.navLink}>Work</Link>
-            <Link href="/contact" className={styles.navLink}>Contact</Link>
-            <button
-              className={styles.themeToggle}
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            >
-              {theme === 'dark' ? 'Light' : 'Dark'}
-            </button>
-          </nav>
-        </div>
-      </header>
-
-      <main className={styles.mainContent}>
+      <main className={`${styles.main} ${isVisible ? styles.visible : ''}`}>
+        <Navigation />
         <section className={styles.hero}>
           <div className={styles.heroBackground}>
             <Image
@@ -201,6 +185,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

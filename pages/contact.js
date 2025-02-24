@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Contact.module.css';
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import Navigation from '../components/Navigation';
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,17 +73,7 @@ export default function Contact() {
       </Head>
 
       <main className={`${styles.main} ${isVisible ? styles.visible : ''}`}>
-        <nav className={styles.nav}>
-          <Link href="/">
-            <span className={styles.logo}>Banana Byte</span>
-          </Link>
-          <div className={styles.navLinks}>
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/work">Work</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-        </nav>
+        <Navigation />
 
         <section className={styles.hero}>
           <h1>Get in Touch</h1>

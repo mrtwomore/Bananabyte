@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Services.module.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Navigation from '../components/Navigation';
 
 export default function Services() {
   const [isVisible, setIsVisible] = useState(false);
@@ -66,17 +67,7 @@ export default function Services() {
       </Head>
 
       <main className={`${styles.main} ${isVisible ? styles.visible : ''}`}>
-        <nav className={styles.nav}>
-          <Link href="/">
-            <span className={styles.logo}>Banana Byte</span>
-          </Link>
-          <div className={styles.navLinks}>
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/work">Work</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-        </nav>
+        <Navigation />
 
         <section className={styles.hero}>
           <div className={styles.videoBackground}>
