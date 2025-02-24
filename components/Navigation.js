@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import styles from '../styles/Navigation.module.css';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -20,6 +24,12 @@ const Navigation = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
+  if (!mounted) return null;
 
   return (
     <nav className={styles.nav}>
@@ -44,6 +54,9 @@ const Navigation = () => {
             <Link href="/services" onClick={toggleMenu}>Services</Link>
             <Link href="/work" onClick={toggleMenu}>Work</Link>
             <Link href="/contact" onClick={toggleMenu}>Contact</Link>
+            <button onClick={toggleTheme} className={styles.themeToggle}>
+              {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+            </button>
           </div>
         </>
       ) : (
@@ -52,6 +65,9 @@ const Navigation = () => {
           <Link href="/services">Services</Link>
           <Link href="/work">Work</Link>
           <Link href="/contact">Contact</Link>
+          <button onClick={toggleTheme} className={styles.themeToggle}>
+            {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+          </button>
         </div>
       )}
     </nav>
