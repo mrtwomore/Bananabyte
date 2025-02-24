@@ -13,66 +13,60 @@ export default function Work() {
 
   const projects = [
     {
-      title: "Modern E-commerce Platform",
-      description: "A full-stack e-commerce solution with a sleek, modern interface. Features include real-time inventory management, secure payments, and a responsive design that works seamlessly across all devices.",
-      category: "fullstack",
-      technologies: ["Next.js", "Node.js", "MongoDB", "Stripe", "Redux"],
-      image: "/images/ai-ecommerce-analytics.jpg",
-      demoLink: "https://ecommerce-demo.bananabyte.co.nz",
-      githubLink: "https://github.com/bananabyte/ecommerce-platform"
-    },
-    {
-      title: "Portfolio Website",
-      description: "A minimalist portfolio website showcasing creative work. Built with performance and accessibility in mind, featuring smooth animations and a dark mode toggle.",
-      category: "frontend",
-      technologies: ["React", "Next.js", "CSS Modules", "Framer Motion"],
-      image: "/images/ai-design-generation.jpg",
-      demoLink: "https://portfolio-demo.bananabyte.co.nz",
-      githubLink: "https://github.com/bananabyte/portfolio-template"
-    },
-    {
-      title: "Task Management System",
-      description: "A comprehensive project management tool with real-time updates, team collaboration features, and detailed analytics. Includes role-based access control and customizable workflows.",
-      category: "backend",
-      technologies: ["Node.js", "Express", "PostgreSQL", "WebSocket", "JWT"],
+      title: "Corporate Training Series",
+      description: "A comprehensive series of training videos for a major retail chain, including health & safety protocols, customer service guidelines, and operational procedures.",
+      category: "video",
+      technologies: ["Sony FX6", "Premiere Pro", "After Effects", "Professional Audio"],
       image: "/images/ai-workflow-automation.jpg",
-      demoLink: "https://tasks-demo.bananabyte.co.nz",
-      githubLink: "https://github.com/bananabyte/task-manager"
+      demoLink: "https://video-demo.bananabyte.co.nz"
     },
     {
-      title: "Real-time Analytics Dashboard",
-      description: "An interactive dashboard displaying real-time business metrics and KPIs. Features include customizable widgets, data visualization, and automated reporting capabilities.",
-      category: "fullstack",
-      technologies: ["React", "D3.js", "Node.js", "WebSocket", "Redis"],
+      title: "Product Photography Campaign",
+      description: "Professional product photography for an e-commerce platform, featuring high-end merchandise with attention to detail and brand consistency.",
+      category: "photo",
+      technologies: ["Sony A7RV", "Studio Lighting", "Photoshop", "Lightroom"],
+      image: "/images/ai-design-generation.jpg",
+      demoLink: "https://photo-demo.bananabyte.co.nz"
+    },
+    {
+      title: "AI-Powered Analytics Dashboard",
+      description: "Custom analytics solution integrating AI for business intelligence, featuring real-time data visualization and automated reporting capabilities.",
+      category: "ai",
+      technologies: ["Python", "TensorFlow", "React", "D3.js"],
       image: "/images/ai-data-visualization.jpg",
-      demoLink: "https://analytics-demo.bananabyte.co.nz",
-      githubLink: "https://github.com/bananabyte/analytics-dashboard"
+      demoLink: "https://analytics-demo.bananabyte.co.nz"
     },
     {
-      title: "AI-Powered Content Management",
-      description: "An innovative content management system leveraging AI for automated content organization, tagging, and optimization. Features smart search, content recommendations, and SEO automation.",
-      category: "fullstack",
-      technologies: ["Python", "TensorFlow", "FastAPI", "React", "PostgreSQL"],
+      title: "Event Highlight Reel",
+      description: "Dynamic video coverage of a major corporate event, including keynote speeches, networking sessions, and promotional material.",
+      category: "video",
+      technologies: ["Sony FX6", "DJI Ronin", "Premiere Pro", "Color Grading"],
+      image: "/images/ai-ecommerce-analytics.jpg",
+      demoLink: "https://event-demo.bananabyte.co.nz"
+    },
+    {
+      title: "Brand Photography Package",
+      description: "Comprehensive brand photography including team headshots, office culture, and environmental shots for marketing materials.",
+      category: "photo",
+      technologies: ["Sony A7RV", "Aperture Lighting", "Capture One", "Photoshop"],
       image: "/images/ai-content-intelligence.jpg",
-      demoLink: "https://cms-demo.bananabyte.co.nz",
-      githubLink: "https://github.com/bananabyte/ai-cms"
+      demoLink: "https://brand-demo.bananabyte.co.nz"
     },
     {
-      title: "Mobile-First Social Platform",
-      description: "A responsive social networking platform built with modern web technologies. Features include real-time messaging, media sharing, and progressive web app capabilities for offline access.",
-      category: "frontend",
-      technologies: ["React Native", "GraphQL", "Apollo", "Firebase", "TypeScript"],
+      title: "IT Infrastructure Modernization",
+      description: "Complete digital transformation project including cloud migration, AI integration, and workflow automation for improved efficiency.",
+      category: "ai",
+      technologies: ["Cloud Services", "Machine Learning", "Process Automation", "Data Security"],
       image: "/images/ai-social-networking.jpg",
-      demoLink: "https://social-demo.bananabyte.co.nz",
-      githubLink: "https://github.com/bananabyte/social-platform"
+      demoLink: "https://it-demo.bananabyte.co.nz"
     }
   ];
 
   const categories = [
     { id: 'all', label: 'All Projects' },
-    { id: 'frontend', label: 'Frontend' },
-    { id: 'backend', label: 'Backend' },
-    { id: 'fullstack', label: 'Full Stack' }
+    { id: 'video', label: 'Videography' },
+    { id: 'photo', label: 'Photography' },
+    { id: 'ai', label: 'AI & IT' }
   ];
 
   const filteredProjects = selectedCategory === 'all' 
@@ -142,19 +136,6 @@ export default function Work() {
                           <span>Live Demo</span>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={styles.icon}>
                             <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" />
-                          </svg>
-                        </a>
-                      )}
-                      {project.githubLink && (
-                        <a 
-                          href={project.githubLink} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className={styles.projectLink}
-                        >
-                          <span>GitHub</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={styles.icon}>
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                           </svg>
                         </a>
                       )}
