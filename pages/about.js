@@ -67,24 +67,24 @@ export default function About() {
             <h2>Milestones</h2>
             <div className={styles.timelineStrip}>
               <div className={styles.timelineItem}>
-                <span className={styles.year}>2020</span>
-                <h3>Started Banana Byte</h3>
-                <p>Digital creative studio launch</p>
+                <span className={styles.year}>2019</span>
+                <h3>Founded Banana Byte Media</h3>
+                <p>AI-enhanced media production company</p>
               </div>
               <div className={styles.timelineItem}>
                 <span className={styles.year}>2021</span>
-                <h3>First Major Client</h3>
-                <p>Comprehensive brand presence</p>
+                <h3>Advanced AI Implementation</h3>
+                <p>Specialized in no-code AI programming</p>
               </div>
               <div className={styles.timelineItem}>
                 <span className={styles.year}>2022</span>
-                <h3>Portfolio Expansion</h3>
-                <p>Video & photo solutions</p>
+                <h3>IT Infrastructure Expert</h3>
+                <p>Network and software ecosystem solutions</p>
               </div>
               <div className={styles.timelineItem}>
                 <span className={styles.year}>2023</span>
-                <h3>Community Recognition</h3>
-                <p>Local innovation award</p>
+                <h3>AI Tools Specialist</h3>
+                <p>Image, text, and voiceover generation</p>
               </div>
             </div>
           </div>
