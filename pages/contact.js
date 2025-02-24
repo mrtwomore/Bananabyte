@@ -25,22 +25,26 @@ export default function Contact() {
     setErrorMessage('');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formsubmit.co/ese@bananabyte.co.nz', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: 'New Contact Form Submission - Banana Byte',
+        }),
       });
-
-      const data = await response.json();
 
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', message: '' });
       } else {
         setSubmitStatus('error');
-        setErrorMessage(data.message || 'There was an error sending your message');
+        setErrorMessage('There was an error sending your message. Please try again.');
       }
     } catch (error) {
       console.error('Submission error:', error);
