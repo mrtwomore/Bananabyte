@@ -19,7 +19,15 @@ const ProjectModal = ({ project, onClose }) => {
 
           <div className={styles.projectDetails}>
             <h3>Project Overview</h3>
-            <p>{project.description}</p>
+            {project.fullDescription ? (
+              <div>
+                {project.fullDescription.split('\n\n').map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
+            ) : (
+              <p>{project.description}</p>
+            )}
 
             <h3>Technologies Used</h3>
             <div className={styles.technologies}>

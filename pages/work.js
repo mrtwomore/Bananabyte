@@ -16,12 +16,13 @@ export default function Work() {
 
   const projects = [
     {
-      title: "Corporate Training Series",
-      description: "A comprehensive series of training videos for a major retail chain, including health & safety protocols, customer service guidelines, and operational procedures.",
+      title: "Digital Induction Transformation",
+      description: "Modernized an engineering company's onboarding process through a comprehensive 6-part video series with custom voiceovers and visual elements. Integrated with Thinkific to create a seamless digital platform for staff and contractor training, enhancing compliance and accessibility.",
       category: "video",
-      technologies: ["Sony FX6", "Premiere Pro", "After Effects", "Professional Audio"],
+      technologies: ["Video Production", "Custom Voiceover", "Thinkific Integration", "Health & Safety Compliance"],
       image: "/images/ai-workflow-automation.jpg",
-      demoLink: "https://video-demo.bananabyte.co.nz"
+      demoLink: "https://video-demo.bananabyte.co.nz",
+      fullDescription: "This project revolutionized an engineering company's traditional induction process, bringing it into the digital age. Working closely with health and safety contractors, company stakeholders, and directors, we developed a comprehensive 6-step video series that transformed their onboarding experience.\n\nThe solution featured professional voiceovers, engaging visuals, and seamless integration with Thinkific's learning platform. This allowed the company to efficiently deliver critical safety and operational training to new staff and contractors through an intuitive web interface.\n\nThe digital transformation significantly improved training consistency, reduced administrative overhead, and ensured better compliance tracking. The modular approach also allows for easy updates as regulations or company policies evolve."
     },
     {
       title: "Product Photography Campaign",
