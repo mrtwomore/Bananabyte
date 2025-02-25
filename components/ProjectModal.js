@@ -1,7 +1,31 @@
 import styles from '../styles/ProjectModal.module.css';
+import { useState } from 'react';
 
 const ProjectModal = ({ project, onClose }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
   if (!project) return null;
+  
+  // Check if this is a photography project with multiple images
+  const hasMultipleImages = project.category === 'photo' && project.images && project.images.length > 1;
+  
+  // Function to navigate to the next image
+  const nextImage = () => {
+    if (hasMultipleImages) {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === project.images.length - 1 ? 0 : prevIndex + 1
+      );
+    }
+  };
+  
+  // Function to navigate to the previous image
+  const prevImage = () => {
+    if (hasMultipleImages) {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === 0 ? project.images.length - 1 : prevIndex - 1
+      );
+    }
+  };
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
@@ -14,7 +38,42 @@ const ProjectModal = ({ project, onClose }) => {
 
         <div className={styles.modalBody}>
           <div className={styles.imageContainer}>
-            <img src={project.image} alt={project.title} />
+            {hasMultipleImages ? (
+              <>
+                <img 
+                  src={project.images[currentImageIndex]} 
+                  alt={`${project.title} - Image ${currentImageIndex + 1}`} 
+                />
+                <div className={styles.imageNavigation}>
+                  <button onClick={prevImage} className={styles.navButton}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={styles.icon}>
+                      <path fillRule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" />
+                    </svg>
+                  </button>
+                  <span className={styles.imageCounter}>
+                    {currentImageIndex + 1} / {project.images.length}
+                  </span>
+                  <button onClick={nextImage} className={styles.navButton}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={styles.icon}>
+                      <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" />
+                    </svg>
+                  </button>
+                </div>
+                <div className={styles.thumbnailContainer}>
+                  {project.images.map((img, index) => (
+                    <div 
+                      key={index} 
+                      className={`${styles.thumbnail} ${index === currentImageIndex ? styles.activeThumbnail : ''}`}
+                      onClick={() => setCurrentImageIndex(index)}
+                    >
+                      <img src={img} alt={`Thumbnail ${index + 1}`} />
+                    </div>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <img src={project.image} alt={project.title} />
+            )}
           </div>
 
           <div className={styles.projectDetails}>

@@ -80,8 +80,8 @@ export default function Home() {
             <div className={styles.imageGrid}>
               <div className={styles.imageCard}>
                 <Image
-                  src="/images/dish1.jpg"
-                  alt="Professional website photography services"
+                  src="/images/Website images/Corporate_website_content_1.JPG"
+                  alt="Professional corporate website photography"
                   width={600}
                   height={400}
                   className={styles.cardImage}
@@ -93,7 +93,7 @@ export default function Home() {
               </div>
               <div className={styles.imageCard}>
                 <Image
-                  src="/images/dish2.jpg"
+                  src="/images/Website images/Lifestyle_photography_business_christchurch.jpg"
                   alt="Product photography for e-commerce and marketing"
                   width={600}
                   height={400}
@@ -106,28 +106,28 @@ export default function Home() {
               </div>
               <div className={styles.imageCard}>
                 <Image
-                  src="/images/dish3.jpg"
-                  alt="AI-powered business solutions"
+                  src="/images/Website images/Kings_electrical_banner.jpg"
+                  alt="Professional industrial photography and videography"
                   width={600}
                   height={400}
                   className={styles.cardImage}
                 />
                 <div className={styles.cardOverlay}>
-                  <h3>AI Integration</h3>
-                  <p>Streamline your operations and enhance customer experience with custom AI solutions tailored to your needs.</p>
+                  <h3>Video Production</h3>
+                  <p>Tell your story through compelling video content that resonates with your audience and showcases your brand.</p>
                 </div>
               </div>
               <div className={styles.imageCard}>
                 <Image
-                  src="/images/dish4.jpg"
-                  alt="Strategic content creation services"
+                  src="/images/Website images/Yoga_lifestyle_2.JPG"
+                  alt="Lifestyle photography services"
                   width={600}
                   height={400}
                   className={styles.cardImage}
                 />
                 <div className={styles.cardOverlay}>
-                  <h3>Content Strategy</h3>
-                  <p>Build a powerful online presence with strategic content that engages your audience and drives growth.</p>
+                  <h3>Lifestyle Content</h3>
+                  <p>Create authentic lifestyle content that connects with your audience and brings your brand to life.</p>
                 </div>
               </div>
             </div>
