@@ -21,48 +21,51 @@ export default function Work() {
       category: "video",
       technologies: ["Video Production", "Custom Voiceover", "Thinkific Integration", "Health & Safety Compliance"],
       image: "/images/ai-workflow-automation.jpg",
-      demoLink: "https://video-demo.bananabyte.co.nz",
+      demoLink: "https://youtu.be/example1",
       fullDescription: "This project revolutionized an engineering company's traditional induction process, bringing it into the digital age. Working closely with health and safety contractors, company stakeholders, and directors, we developed a comprehensive 6-step video series that transformed their onboarding experience.\n\nThe solution featured professional voiceovers, engaging visuals, and seamless integration with Thinkific's learning platform. This allowed the company to efficiently deliver critical safety and operational training to new staff and contractors through an intuitive web interface.\n\nThe digital transformation significantly improved training consistency, reduced administrative overhead, and ensured better compliance tracking. The modular approach also allows for easy updates as regulations or company policies evolve."
     },
     {
       title: "Product Photography Campaign",
-      description: "Professional product photography for an e-commerce platform, featuring high-end merchandise with attention to detail and brand consistency.",
+      description: "Professional product photography for a luxury homeware brand's e-commerce platform, featuring meticulously styled compositions that elevated their visual identity and increased conversion rates.",
       category: "photo",
       technologies: ["Sony A7RV", "Studio Lighting", "Photoshop", "Lightroom"],
-      image: "/images/ai-design-generation.jpg",
-      demoLink: "https://photo-demo.bananabyte.co.nz"
+      image: "/images/product-photography.jpg",
+      fullDescription: "This comprehensive product photography campaign transformed the online presence of a luxury homeware brand looking to elevate their e-commerce experience. The client needed high-quality imagery that would showcase their products' craftsmanship while creating a cohesive visual identity across their digital platforms.\n\nWorking closely with their marketing team, we developed a photography style guide that aligned with their brand values of sophistication, quality, and timeless design. The project encompassed over 120 individual products across multiple collections, each requiring careful styling and attention to detail.\n\nOur approach included:\n\n• Creating consistent lighting setups that highlighted textures and materials\n• Styling compositions that told a story about the product's use and aesthetic\n• Developing multiple angles and detail shots for each product\n• Implementing a rigorous post-processing workflow for color accuracy and brand consistency\n\nThe final deliverables included primary product images, lifestyle compositions, and detail shots optimized for various platforms including their e-commerce site, social media, and digital advertising campaigns.\n\nFollowing implementation, the client reported a 34% increase in conversion rate and significantly longer time spent on product pages, directly attributable to the improved visual presentation."
     },
     {
       title: "AI-Powered Analytics Dashboard",
-      description: "Custom analytics solution integrating AI for business intelligence, featuring real-time data visualization and automated reporting capabilities.",
+      description: "Custom analytics solution integrating AI for business intelligence, featuring real-time data visualization and automated reporting capabilities for a retail chain seeking to optimize operations.",
       category: "ai",
       technologies: ["Python", "TensorFlow", "React", "D3.js"],
       image: "/images/ai-data-visualization.jpg",
-      demoLink: "https://analytics-demo.bananabyte.co.nz"
+      demoLink: "https://analytics-demo.bananabyte.co.nz",
+      fullDescription: "This project involved developing a sophisticated AI-powered analytics dashboard for a retail chain struggling to make sense of their growing data ecosystem. The client needed a solution that could transform raw data into actionable insights without requiring specialized data science expertise from their team.\n\nWe designed and implemented a custom analytics platform that leveraged machine learning algorithms to identify patterns, anomalies, and opportunities within their sales, inventory, and customer data. The system featured intuitive data visualizations built with D3.js and React, making complex information accessible to decision-makers at all levels.\n\nKey features included:\n\n• Predictive inventory management that reduced stockouts by 37%\n• Customer segmentation and behavior analysis that improved targeted marketing ROI\n• Automated anomaly detection for loss prevention and fraud identification\n• Customizable reporting with scheduled delivery to stakeholders\n\nThe solution integrated with their existing data sources and provided a unified view of business performance. After implementation, the client reported a 22% increase in operational efficiency and significantly improved decision-making speed across departments."
     },
     {
-      title: "Event Highlight Reel",
-      description: "Dynamic video coverage of a major corporate event, including keynote speeches, networking sessions, and promotional material.",
+      title: "Startup Spotlight Series",
+      description: "Created an engaging video series for a prominent Otautahi (Canterbury) startup incubator, showcasing local entrepreneurs through compelling 2-minute stories optimized for social media and web platforms.",
       category: "video",
-      technologies: ["Sony FX6", "DJI Ronin", "Premiere Pro", "Color Grading"],
-      image: "/images/ai-ecommerce-analytics.jpg",
-      demoLink: "https://event-demo.bananabyte.co.nz"
+      technologies: ["Interview Direction", "Sound Engineering", "Color Grading", "Multi-platform Formatting"],
+      image: "/images/startup-spotlight.jpg",
+      demoLink: "https://youtube.com/playlist?list=example2",
+      fullDescription: "This comprehensive video project for a leading startup incubator in Otautahi (Canterbury) showcased the journeys and innovations of emerging local entrepreneurs. The series required a full-stack approach to video production, where we handled every aspect from concept to final delivery.\n\nWorking directly with founders, we conducted interview-style sessions that captured authentic stories and distilled them into compelling 2-minute video segments. Each video was carefully crafted to highlight the unique value proposition of each startup while maintaining a consistent series identity.\n\nOur responsibilities included developing thoughtful interview questions, directing talent (often first-time on-camera participants), capturing professional-quality audio in varied environments, and post-production excellence including editing, sound engineering, color grading, and custom graphics.\n\nThe final deliverables were optimized for multiple platforms, including social media advertising campaigns and website content. The series successfully increased engagement with the incubator's programs and provided valuable exposure for the featured startups, helping them attract attention, users, and potential investors."
     },
     {
       title: "Brand Photography Package",
-      description: "Comprehensive brand photography including team headshots, office culture, and environmental shots for marketing materials.",
+      description: "Comprehensive visual identity package for a tech startup, including team portraits, workspace culture photography, and environmental shots that authentically communicated their innovative company culture.",
       category: "photo",
-      technologies: ["Sony A7RV", "Aperture Lighting", "Capture One", "Photoshop"],
-      image: "/images/ai-content-intelligence.jpg",
-      demoLink: "https://brand-demo.bananabyte.co.nz"
+      technologies: ["Sony A7RV", "Environmental Portraiture", "Capture One", "Photoshop"],
+      image: "/images/brand-photography.jpg",
+      fullDescription: "This brand photography project was commissioned by a rapidly growing tech startup preparing for a major rebranding initiative. The company needed authentic visual assets that would communicate their innovative culture, showcase their talented team, and create a consistent visual identity across all marketing channels.\n\nThe comprehensive package included:\n\n• Professional headshots of 35+ team members with consistent styling while preserving individual personality\n• Environmental portraits of leadership and department teams in their natural work settings\n• Candid workplace culture photography capturing collaboration and the company's unique atmosphere\n• Office and workspace imagery highlighting their modern facilities and creative environment\n• Product and technology documentation for marketing materials\n\nThe project required careful planning to minimize disruption to the company's operations while ensuring we captured genuine moments that reflected their culture. We developed a shooting schedule that accommodated team availability and created comfortable, natural settings for people who weren't accustomed to being photographed professionally.\n\nThe final image library contained over 300 curated and edited photographs, organized into categories for easy implementation across their website, social media, press materials, and internal communications. The client successfully launched their rebranding with these assets, reporting significantly improved engagement on their careers page and social media profiles."
     },
     {
-      title: "IT Infrastructure Modernization",
-      description: "Complete digital transformation project including cloud migration, AI integration, and workflow automation for improved efficiency.",
+      title: "AI-Enhanced Business Transformation",
+      description: "End-to-end digital transformation for a professional services firm, implementing AI-powered workflows, cloud migration, and custom automation solutions that reduced operational costs by 40% while improving client service delivery.",
       category: "ai",
-      technologies: ["Cloud Services", "Machine Learning", "Process Automation", "Data Security"],
-      image: "/images/ai-social-networking.jpg",
-      demoLink: "https://it-demo.bananabyte.co.nz"
+      technologies: ["Custom AI Solutions", "Process Automation", "Cloud Migration", "Workflow Optimization"],
+      image: "/images/ai-business-transformation.jpg",
+      demoLink: "https://ai-demo.bananabyte.co.nz",
+      fullDescription: "This comprehensive digital transformation project revolutionized operations for a professional services firm struggling with outdated systems, manual processes, and increasing competitive pressure. The client needed a strategic technology partner to guide them through a complete modernization while minimizing disruption to their client services.\n\nOur approach began with a thorough assessment of their existing workflows, identifying critical pain points and opportunities for AI-enhanced automation. We developed a phased implementation strategy that prioritized quick wins while building toward a completely transformed technology ecosystem.\n\nKey components of the transformation included:\n\n• Custom AI-powered document processing that reduced manual data entry by 85%\n• Intelligent client intake system with automated information gathering and verification\n• Cloud migration of legacy systems with enhanced security and accessibility\n• Workflow automation for routine tasks, freeing staff for higher-value activities\n• Custom dashboards providing real-time visibility into business operations\n\nThe implementation included comprehensive staff training and change management support to ensure successful adoption. We developed custom documentation and conducted hands-on workshops to build internal capability and confidence with the new systems.\n\nThe results exceeded expectations, with the client reporting a 40% reduction in operational costs, 65% faster client onboarding, and significantly improved staff satisfaction. The new AI-enhanced systems also enabled them to offer innovative service packages that differentiated them in their market."
     }
   ];
 
