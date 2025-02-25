@@ -14,7 +14,7 @@ export default function Services() {
   const services = [
     {
       title: "Videography",
-      description: "Professional videography services specializing in business content creation. From internal training videos to marketing content, we deliver high-quality video solutions.",
+      description: "Professional videography services specialising in business content creation. From internal training videos to marketing content, we deliver high-quality video solutions.",
       features: [
         "Internal Training & Induction Videos",
         "Health & Safety Documentation",
@@ -62,7 +62,7 @@ export default function Services() {
     <div className={styles.container}>
       <Head>
         <title>Services | Banana Byte</title>
-        <meta name="description" content="Professional videography and photography services for businesses in Christchurch, New Zealand. Specializing in corporate videos, training content, and digital marketing materials." />
+        <meta name="description" content="Professional videography and photography services for businesses in Christchurch, New Zealand. Specialising in corporate videos, training content, and digital marketing materials." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -110,7 +110,7 @@ export default function Services() {
           <div className={styles.faqGrid}>
             <div className={styles.faqItem}>
               <h3>What services do you provide?</h3>
-              <p>We specialize in videography and photography for small and medium-sized businesses, focusing on professional content for internal use (like induction videos and health & safety materials) and marketing content. While we have experience in event coverage, we can recommend specialists for specific event needs.</p>
+              <p>We specialise in videography and photography for small and medium-sized businesses, focusing on professional content for internal use (like induction videos and health & safety materials) and marketing content. While we have experience in event coverage, we can recommend specialists for specific event needs.</p>
             </div>
             <div className={styles.faqItem}>
               <h3>How long does it take to complete a project?</h3>

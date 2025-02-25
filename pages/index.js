@@ -63,7 +63,7 @@ export default function Home() {
               <div className={styles.textBlock}>
                 <h3>Why Choose Us</h3>
                 <p>
-                  We specialize in helping Kiwi businesses stand out in the digital world. 
+                  We specialise in helping Kiwi businesses stand out in the digital world. 
                   Our approach combines creative excellence with strategic thinking, 
                   ensuring every piece of content we create not only looks exceptional 
                   but also drives real business results. Whether you're a startup or an 

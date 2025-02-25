@@ -105,7 +105,7 @@ export default function About() {
                   </div>
                   <div className={styles.skillItem}>
                     <span>Corporate Training</span>
-                    <p>Specialized in creating engaging induction, HR, and health & safety training videos</p>
+                    <p>Specialised in creating engaging induction, HR, and health & safety training videos</p>
                   </div>
                 </div>
               </div>
