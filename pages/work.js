@@ -55,7 +55,7 @@ export default function Work() {
       category: "video",
       technologies: ["Interview Direction", "Sound Engineering", "Color Grading", "Multi-platform Formatting"],
       image: "/images/Website images/Corporate_showcase_startup_videography.JPG",
-      demoLink: "https://youtube.com/playlist?list=example2",
+      demoLink: "https://www.youtube.com/watch?v=Ip5zM6nKDR0",
       fullDescription: "This comprehensive video project for a leading startup incubator in Otautahi (Canterbury) showcased the journeys and innovations of emerging local entrepreneurs. The series required a full-stack approach to video production, where we handled every aspect from concept to final delivery.\n\nWorking directly with founders, we conducted interview-style sessions that captured authentic stories and distilled them into compelling 2-minute video segments. Each video was carefully crafted to highlight the unique value proposition of each startup while maintaining a consistent series identity.\n\nOur responsibilities included developing thoughtful interview questions, directing talent (often first-time on-camera participants), capturing professional-quality audio in varied environments, and post-production excellence including editing, sound engineering, color grading, and custom graphics.\n\nThe final deliverables were optimized for multiple platforms, including social media advertising campaigns and website content. The series successfully increased engagement with the incubator's programs and provided valuable exposure for the featured startups, helping them attract attention, users, and potential investors."
     },
     {
