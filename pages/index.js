@@ -31,7 +31,7 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.heroBackground}>
             <Image
-              src="/images/French_connection_AI_videography_business_NZ.jpg"
+              src="/images/_DSC4181.jpg"
               alt="Professional videography and AI services by Banana Byte"
               className={styles.heroImage}
               width={1920}
