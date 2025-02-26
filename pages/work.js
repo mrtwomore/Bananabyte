@@ -147,7 +147,19 @@ export default function Work() {
               onClick={() => handleProjectClick(project)}
             >
               <div className={styles.projectImage}>
-                <img src={project.image} alt={project.title} />
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  onError={(e) => {
+                    console.error(`Failed to load project image: ${project.image}`);
+                    // If the project has images array, try the first one as fallback
+                    if (project.images && project.images.length > 0) {
+                      e.target.src = project.images[0];
+                    } else {
+                      e.target.src = '/images/placeholder.svg';
+                    }
+                  }}
+                />
                 <div className={styles.projectOverlay}>
                   <div className={styles.projectContent}>
                     <h3>{project.title}</h3>

@@ -1,13 +1,14 @@
 import styles from '../styles/ProjectModal.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const ProjectModal = ({ project, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   
   if (!project) return null;
   
-  // Check if this is a photography project with multiple images
-  const hasMultipleImages = project.category === 'photo' && project.images && project.images.length > 1;
+  // Check if this project has multiple images
+  const hasMultipleImages = project.images && project.images.length > 1;
   
   // Function to navigate to the next image
   const nextImage = () => {
@@ -27,6 +28,13 @@ const ProjectModal = ({ project, onClose }) => {
     }
   };
 
+  // Effect to set images as loaded
+  useEffect(() => {
+    if (project.images && project.images.length > 0) {
+      setImagesLoaded(true);
+    }
+  }, [project.images]);
+
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
@@ -43,6 +51,10 @@ const ProjectModal = ({ project, onClose }) => {
                 <img 
                   src={project.images[currentImageIndex]} 
                   alt={`${project.title} - Image ${currentImageIndex + 1}`} 
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${project.images[currentImageIndex]}`);
+                    e.target.src = project.image || '/images/placeholder.svg';
+                  }}
                 />
                 <div className={styles.imageNavigation}>
                   <button onClick={prevImage} className={styles.navButton}>
@@ -66,13 +78,27 @@ const ProjectModal = ({ project, onClose }) => {
                       className={`${styles.thumbnail} ${index === currentImageIndex ? styles.activeThumbnail : ''}`}
                       onClick={() => setCurrentImageIndex(index)}
                     >
-                      <img src={img} alt={`Thumbnail ${index + 1}`} />
+                      <img 
+                        src={img} 
+                        alt={`Thumbnail ${index + 1}`} 
+                        onError={(e) => {
+                          console.error(`Failed to load thumbnail: ${img}`);
+                          e.target.src = project.image || '/images/placeholder.svg';
+                        }}
+                      />
                     </div>
                   ))}
                 </div>
               </>
             ) : (
-              <img src={project.image} alt={project.title} />
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                onError={(e) => {
+                  console.error(`Failed to load main image: ${project.image}`);
+                  e.target.src = '/images/placeholder.svg';
+                }}
+              />
             )}
           </div>
 
