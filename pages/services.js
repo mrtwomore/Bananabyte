@@ -35,25 +35,14 @@ export default function Services() {
       ]
     },
     {
-      title: "Training & Consultation",
-      description: "Empower your team with professional training in content creation and equipment usage. Available both in-person and online.",
+      title: "AI & Technology Consultation",
+      description: "Expert guidance on implementing AI solutions and technology strategies for your business. From custom chatbots to workflow automation, we help you leverage cutting-edge technology.",
       features: [
-        "iPhone Photography/Videography",
-        "Editing Software Training",
-        "Equipment Consultation",
-        "Marketing Team Workshops",
-        "Content Strategy Planning"
-      ]
-    },
-    {
-      title: "Equipment & Technical",
-      description: "Professional-grade equipment for high-quality content creation, including industry-standard cameras and lighting solutions.",
-      features: [
-        "Sony FX6 Camera",
-        "Sony A7Siii & A7RV",
-        "DJI Ronin Gimbal",
-        "Aperture Lighting",
-        "Amaran Lighting Systems"
+        "Custom AI Chatbot Development",
+        "AI-Enhanced Web Applications",
+        "Workflow Automation Solutions",
+        "Technology Integration Strategy",
+        "AI-Assisted Content Creation"
       ]
     }
   ];
@@ -62,7 +51,7 @@ export default function Services() {
     <div className={styles.container}>
       <Head>
         <title>Services | Banana Byte</title>
-        <meta name="description" content="Professional videography and photography services for businesses in Christchurch, New Zealand. Specialising in corporate videos, training content, and digital marketing materials." />
+        <meta name="description" content="Professional videography, photography, and AI technology services for businesses in Christchurch, New Zealand. Specialising in corporate videos, training content, and digital marketing materials." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -78,7 +67,6 @@ export default function Services() {
               playsInline
               preload="auto"
               className={styles.backgroundVideo}
-              defaultMuted
             >
               <source src="/videos/web%20vid.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -110,7 +98,7 @@ export default function Services() {
           <div className={styles.faqGrid}>
             <div className={styles.faqItem}>
               <h3>What services do you provide?</h3>
-              <p>We specialise in videography and photography for small and medium-sized businesses, focusing on professional content for internal use (like induction videos and health & safety materials) and marketing content. While we have experience in event coverage, we can recommend specialists for specific event needs.</p>
+              <p>We specialise in videography, photography, and AI technology solutions for small and medium-sized businesses. Our services range from professional content creation for internal use and marketing to custom AI applications and technology consultation. While we have experience in event coverage, we can recommend specialists for specific event needs.</p>
             </div>
             <div className={styles.faqItem}>
               <h3>How long does it take to complete a project?</h3>
@@ -119,6 +107,14 @@ export default function Services() {
             <div className={styles.faqItem}>
               <h3>Can you assist in training business owners or marketing teams?</h3>
               <p>Yes! We offer comprehensive training modules and hands-on sessions. Whether it's iPhone photography, video editing software (Premier, Davinci, Capcut), or equipment consultation, we're here to help your team develop their content creation skills.</p>
+            </div>
+            <div className={styles.faqItem}>
+              <h3>What AI solutions can you provide for my business?</h3>
+              <p>We develop custom AI solutions tailored to your specific business needs. This includes AI-powered chatbots for customer service, workflow automation tools, AI-enhanced web applications, and AI-assisted content creation. Our solutions are designed to be cost-effective and practical, focusing on delivering real business value rather than implementing technology for its own sake.</p>
+            </div>
+            <div className={styles.faqItem}>
+              <h3>Do you provide technology buying advice?</h3>
+              <p>Absolutely! We offer vendor-neutral technology consultation to help you make informed decisions about hardware and software purchases. Whether you're setting up a new office, upgrading your equipment, or implementing new systems, we can provide recommendations based on your specific needs, budget, and long-term goals. Our advice is always focused on practical solutions that deliver the best value for your investment.</p>
             </div>
           </div>
         </section>
