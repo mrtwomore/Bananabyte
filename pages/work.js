@@ -79,7 +79,7 @@ export default function Work() {
       description: "Developed specialised web applications addressing industry-specific challenges, including a comprehensive mortgage amortisation calculator with multiple export formats and a professional workout programme formatter that reduced admin time from 45 to 10 minutes for personal trainers.",
       category: "ai",
       technologies: ["AI-Assisted Development", "Web App Design", "UI/UX", "PDF Generation", "Data Export", "LLM Integration"],
-      image: "/images/Website images/Xnapper-2025-02-26-17.28.48.png",
+      image: "/images/mortgage-calculator/mortgage-calculator-main.png",
       images: [
         "/images/mortgage-calculator/mortgage-calculator-1.png",
         "/images/mortgage-calculator/mortgage-calculator-2.png",
