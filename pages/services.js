@@ -51,6 +51,7 @@ export default function Services() {
     <div className={styles.container}>
       <Head>
         <title>Services | Banana Byte</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="description" content="Professional videography, photography, and AI technology services for businesses in Christchurch, New Zealand. Specialising in corporate videos, training content, and digital marketing materials." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
