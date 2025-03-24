@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Navigation from '../components/Navigation';
+import HeroCarousel from '../components/HeroCarousel';
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -29,17 +30,7 @@ export default function Home() {
       <main className={`${styles.main} ${isVisible ? styles.visible : ''}`}>
         <Navigation />
         <section className={styles.hero}>
-          <div className={styles.heroBackground}>
-            <Image
-              src="/images/_DSC4181.jpg"
-              alt="Professional videography and AI services by Banana Byte"
-              className={styles.heroImage}
-              width={1920}
-              height={1080}
-              priority
-              quality={85}
-            />
-          </div>
+          <HeroCarousel />
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
               Crafting Digital Stories That Make Your Brand Stand Out
@@ -78,58 +69,66 @@ export default function Home() {
           <div className={styles.sectionInner}>
             <h2 className={styles.sectionTitle}>Expert Digital Solutions</h2>
             <div className={styles.imageGrid}>
-              <div className={styles.imageCard}>
-                <Image
-                  src="/images/Website images/Corporate_website_content_1.JPG"
-                  alt="Professional corporate website photography"
-                  width={600}
-                  height={400}
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardOverlay}>
-                  <h3>Website Photography</h3>
-                  <p>Elevate your online presence with professional, brand-aligned photography that captures your true identity.</p>
+              <Link href="/work?category=photo&project=Brand Photography Package" className={styles.imageCardLink}>
+                <div className={styles.imageCard}>
+                  <Image
+                    src="/images/Website images/Corporate_website_content_1.JPG"
+                    alt="Professional corporate website photography"
+                    width={600}
+                    height={400}
+                    className={styles.cardImage}
+                  />
+                  <div className={styles.cardOverlay}>
+                    <h3>Website Photography</h3>
+                    <p>Elevate your online presence with professional, brand-aligned photography that captures your true identity.</p>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.imageCard}>
-                <Image
-                  src="/images/Website images/Lifestyle_photography_business_christchurch.jpg"
-                  alt="Product photography for e-commerce and marketing"
-                  width={600}
-                  height={400}
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardOverlay}>
-                  <h3>Product Photography</h3>
-                  <p>Showcase your products with stunning visuals that drive engagement and boost conversions.</p>
+              </Link>
+              <Link href="/work?category=photo&project=Product Photography Campaign" className={styles.imageCardLink}>
+                <div className={styles.imageCard}>
+                  <Image
+                    src="/images/Website images/Lifestyle_photography_business_christchurch.jpg"
+                    alt="Product photography for e-commerce and marketing"
+                    width={600}
+                    height={400}
+                    className={styles.cardImage}
+                  />
+                  <div className={styles.cardOverlay}>
+                    <h3>Product Photography</h3>
+                    <p>Showcase your products with stunning visuals that drive engagement and boost conversions.</p>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.imageCard}>
-                <Image
-                  src="/images/Website images/Kings_electrical_banner.jpg"
-                  alt="Professional industrial photography and videography"
-                  width={600}
-                  height={400}
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardOverlay}>
-                  <h3>Video Production</h3>
-                  <p>Tell your story through compelling video content that resonates with your audience and showcases your brand.</p>
+              </Link>
+              <Link href="/work?category=video&project=Digital Induction Transformation" className={styles.imageCardLink}>
+                <div className={styles.imageCard}>
+                  <Image
+                    src="/images/Website images/Kings_electrical_banner.jpg"
+                    alt="Professional industrial photography and videography"
+                    width={600}
+                    height={400}
+                    className={styles.cardImage}
+                  />
+                  <div className={styles.cardOverlay}>
+                    <h3>Video Production</h3>
+                    <p>Tell your story through compelling video content that resonates with your audience and showcases your brand.</p>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.imageCard}>
-                <Image
-                  src="/images/Website images/Yoga_lifestyle_2.JPG"
-                  alt="Lifestyle photography services"
-                  width={600}
-                  height={400}
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardOverlay}>
-                  <h3>Lifestyle Content</h3>
-                  <p>Create authentic lifestyle content that connects with your audience and brings your brand to life.</p>
+              </Link>
+              <Link href="/work?category=photo&project=Brand Photography Package" className={styles.imageCardLink}>
+                <div className={styles.imageCard}>
+                  <Image
+                    src="/images/Website images/Yoga_lifestyle_2.JPG"
+                    alt="Lifestyle photography services"
+                    width={600}
+                    height={400}
+                    className={styles.cardImage}
+                  />
+                  <div className={styles.cardOverlay}>
+                    <h3>Lifestyle Content</h3>
+                    <p>Create authentic lifestyle content that connects with your audience and brings your brand to life.</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </section>

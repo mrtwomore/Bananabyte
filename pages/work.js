@@ -2,17 +2,37 @@ import Head from 'next/head';
 import styles from '../styles/Work.module.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import ProjectModal from '../components/ProjectModal';
 import Navigation from '../components/Navigation';
 
 export default function Work() {
+  const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+    
+    // Get category and project from URL query parameters
+    if (router.isReady) {
+      const { category, project } = router.query;
+      
+      // Set category filter if provided in URL
+      if (category) {
+        setSelectedCategory(category);
+      }
+      
+      // Find and open project if project name is provided
+      if (project) {
+        const projectToOpen = projects.find(p => p.title === project);
+        if (projectToOpen) {
+          setSelectedProject(projectToOpen);
+        }
+      }
+    }
+  }, [router.isReady, router.query]);
 
   const projects = [
     {
@@ -105,10 +125,36 @@ export default function Work() {
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
+    
+    // Update URL with query parameters without page reload
+    const query = { category: selectedCategory };
+    if (project) {
+      query.project = project.title;
+    }
+    router.push({
+      pathname: '/work',
+      query: query
+    }, undefined, { shallow: true });
   };
 
   const handleCloseModal = () => {
     setSelectedProject(null);
+    
+    // Remove project from URL when closing modal
+    router.push({
+      pathname: '/work',
+      query: selectedCategory !== 'all' ? { category: selectedCategory } : {}
+    }, undefined, { shallow: true });
+  };
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    
+    // Update URL when changing category
+    router.push({
+      pathname: '/work',
+      query: category !== 'all' ? { category } : {}
+    }, undefined, { shallow: true });
   };
 
   return (
@@ -132,7 +178,7 @@ export default function Work() {
             <button
               key={category.id}
               className={`${styles.categoryButton} ${selectedCategory === category.id ? styles.active : ''}`}
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={() => handleCategoryChange(category.id)}
             >
               {category.label}
             </button>
