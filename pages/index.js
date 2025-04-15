@@ -138,10 +138,9 @@ export default function Home() {
             <h2 className={styles.sectionTitle}>Start Your Journey</h2>
             <div className={styles.textSection}>
               <div className={styles.textBlock}>
-                <h3>Visit Our Studio</h3>
+                <h3>Proudly based in Christchurch</h3>
                 <p>
-                  Based in the heart of Christchurch<br />
-                  New Zealand's Creative Hub
+                  New Zealand's Garden City
                 </p>
               </div>
               <div className={styles.textBlock}>
