@@ -63,6 +63,29 @@ export default function About() {
             </p>
           </div>
 
+          <div className={styles.certifications}>
+            <h2>Professional Development</h2>
+            <p className={styles.certIntro}>Currently pursuing the following industry certifications to expand my technical expertise:</p>
+            <div className={styles.certGrid}>
+              <div className={styles.certCard}>
+                <h3>CompTIA Security+</h3>
+                <p>Comprehensive cybersecurity training focused on threat detection, risk management, and security infrastructure implementation.</p>
+              </div>
+              <div className={styles.certCard}>
+                <h3>CompTIA Network+</h3>
+                <p>Advanced networking skills covering infrastructure configuration, troubleshooting, and security implementation across diverse environments.</p>
+              </div>
+              <div className={styles.certCard}>
+                <h3>Microsoft Intune</h3>
+                <p>Cloud-based endpoint management solution for enforcing corporate policies and securing organizational data across devices.</p>
+              </div>
+              <div className={styles.certCard}>
+                <h3>Azure Active Directory</h3>
+                <p>Microsoft's cloud identity and access management service for secure authentication and authorization across cloud applications.</p>
+              </div>
+            </div>
+          </div>
+
           <div className={styles.achievements}>
             <h2>Milestones</h2>
             <div className={styles.timelineStrip}>

@@ -145,6 +145,69 @@
   margin-bottom: 0;
 }
 
+.certifications {
+  margin-bottom: 8rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.certifications h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.certIntro {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 0 auto 3rem;
+  font-weight: 300;
+  max-width: 800px;
+}
+
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.certCard {
+  padding: 2rem;
+  border: 1px solid rgba(var(--text-color-rgb), 0.1);
+  border-radius: 24px;
+  background: rgba(var(--text-color-rgb), 0.02);
+  transition: all 0.3s ease;
+}
+
+.certCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(var(--text-color-rgb), 0.08);
+  border-color: rgba(var(--text-color-rgb), 0.15);
+}
+
+.certCard h3 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.certCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+}
+
 .achievements {
   margin-bottom: 8rem;
   max-width: 1000px;
@@ -259,10 +322,14 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
+  text-align: center;
 }
 
 .skillItem {
   text-align: center;
+  width: 100%;
+  max-width: 90%;
 }
 
 .skillItem span {
@@ -271,6 +338,7 @@
   font-weight: 400;
   margin-bottom: 0.5rem;
   color: var(--accent-color);
+  text-align: center;
 }
 
 .skillItem p {
@@ -440,5 +508,23 @@
 
   .interestCard h3 {
     font-size: 1.4rem;
+  }
+
+  .certGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .certCard {
+    padding: 1.5rem;
+  }
+  
+  .certCard h3 {
+    font-size: 1.2rem;
+  }
+
+  .certIntro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
 } 
