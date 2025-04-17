@@ -128,4 +128,11 @@
   .hamburger {
     display: flex;
   }
+}
+
+/* Mobile Controls */
+.mobileControls {
+  display: flex;
+  align-items: center;
+  z-index: 1000;
 } 
