@@ -117,6 +117,10 @@ export default function Services() {
               <h3>Do you provide technology buying advice?</h3>
               <p>Absolutely! We offer vendor-neutral technology consultation to help you make informed decisions about hardware and software purchases. Whether you're setting up a new office, upgrading your equipment, or implementing new systems, we can provide recommendations based on your specific needs, budget, and long-term goals. Our advice is always focused on practical solutions that deliver the best value for your investment.</p>
             </div>
+            <div className={styles.faqItem}>
+              <h3>How do you ensure successful media creation and content delivery?</h3>
+              <p>We have established game plans for all our content creation projects. Our proven process combines clear communication, structured planning, and regular checkpoints to keep everyone aligned. From initial consultation to final delivery, we ensure your vision is captured effectively and efficiently.</p>
+            </div>
           </div>
         </section>
 
