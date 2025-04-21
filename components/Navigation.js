@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import styles from '../styles/Navigation.module.css';
-import WeatherWidget from './WeatherWidget';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +40,6 @@ const Navigation = () => {
       {isMobile ? (
         <>
           <div className={styles.mobileControls}>
-            <WeatherWidget />
             <button 
               className={`${styles.hamburger} ${isMenuOpen ? styles.active : ''}`}
               onClick={toggleMenu}
@@ -65,7 +63,6 @@ const Navigation = () => {
         </>
       ) : (
         <div className={styles.navLinks}>
-          <WeatherWidget />
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
           <Link href="/work">Work</Link>
