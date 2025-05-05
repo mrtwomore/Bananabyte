@@ -56,6 +56,7 @@ const Navigation = () => {
             <Link href="/services" onClick={toggleMenu}>Services</Link>
             <Link href="/work" onClick={toggleMenu}>Work</Link>
             <Link href="/contact" onClick={toggleMenu}>Contact</Link>
+            <Link href="/personal-training" onClick={toggleMenu}>Personal Training</Link>
             <button onClick={toggleTheme} className={styles.themeToggle}>
               {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
             </button>
@@ -67,6 +68,7 @@ const Navigation = () => {
           <Link href="/services">Services</Link>
           <Link href="/work">Work</Link>
           <Link href="/contact">Contact</Link>
+          <Link href="/personal-training">Personal Training</Link>
           <button onClick={toggleTheme} className={styles.themeToggle}>
             {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
           </button>
