@@ -381,7 +381,7 @@ export default function PersonalTraining() {
               </div>
               <div className={styles.bulletPoint}>
                 <span className={styles.bulletIcon}>✓</span>
-                <p>Your programme evolves as you do—I've kept clients progressing for 7+ years through intelligent programming</p>
+                <p>Your programme evolves as you do— I've built out custom training plans for some of my clients across a 12 years period whilst still being able to deliver consistent results</p>
               </div>
               <div className={styles.bulletPoint}>
                 <span className={styles.bulletIcon}>✓</span>
