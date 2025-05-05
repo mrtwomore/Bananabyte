@@ -68,6 +68,10 @@ export default function About() {
             <p className={styles.certIntro}>Currently pursuing the following industry certifications to expand my technical expertise:</p>
             <div className={styles.certGrid}>
               <div className={styles.certCard}>
+                <h3>Bachelor of Computer Science</h3>
+                <p>Currently studying Computer Science at the University of Canterbury, expanding my programming and software development knowledge.</p>
+              </div>
+              <div className={styles.certCard}>
                 <h3>CompTIA Security+</h3>
                 <p>Comprehensive cybersecurity training focused on threat detection, risk management, and security infrastructure implementation.</p>
               </div>
@@ -173,6 +177,13 @@ export default function About() {
       </main>
 
       <footer className={styles.footer}>
+        <div className={styles.footerColumn}>
+          <h4>Our Solutions</h4>
+          <Link href="/services" className={styles.footerLink}>Website Photography</Link>
+          <Link href="/services" className={styles.footerLink}>Product Photography</Link>
+          <Link href="/services" className={styles.footerLink}>AI Solutions</Link>
+          <Link href="/personal-training" className={styles.footerLink}>Personal Training</Link>
+        </div>
         <p>© 2024 Banana Byte. All rights reserved.</p>
       </footer>
     </div>
