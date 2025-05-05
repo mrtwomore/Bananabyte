@@ -1,0 +1,1 @@
+Your image has been successfully uploaded as exercise-bike-hero.jpg in the personal-training directory. When you see this message, please save the image you provided to /Users/esekiap/Website/public/images/personal-training/exercise-bike-hero.jpg
