@@ -298,8 +298,8 @@ export default function PersonalTraining() {
         </script>
         <style jsx global>{`
           stripe-pricing-table {
-            --bg-color: ${theme === 'dark' ? '#121212' : '#ffffff'};
-            --text-color: ${theme === 'dark' ? '#ffffff' : '#121212'};
+            --bg-color: #000000;
+            --text-color: #ffffff;
           }
         `}</style>
       </Head>
@@ -467,7 +467,7 @@ export default function PersonalTraining() {
                 <div dangerouslySetInnerHTML={{
                   __html: `
                   <stripe-pricing-table
-                    pricing-table-id="prctbl_1RLB0tDRTz9PrhCb8xbnD1Y2"
+                    pricing-table-id="prctbl_1ROs7UDRTz9PrhCbLoJ1NGq2"
                     publishable-key="pk_live_51OdgKlDRTz9PrhCbojQC4mqhFRbbQG1XduXqWmyf5ta1kH3mlnGb78xxoRUQisWa58oejXUVB16rg6FzAVaC8SBd00Y0nyOcB9"
                   ></stripe-pricing-table>
                   `
